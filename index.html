@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Study Hygiene</title>
+  <title>Study Hygiene | Premium Online Tutoring & Test Prep</title>
+
+  <!-- SEO: meta description -->
+  <meta name="description" content="Study Hygiene offers premium online tutoring, test prep, and academic coaching for middle school, high school, college, and professionals. Expert support for math, SAT/ACT, GRE, ASVAB, law, and more." />
+
   <style>
     :root {
       --bg: #0f172a;
       --bg-soft: rgba(15, 23, 42, 0.4);
       --panel: #111827;
       --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.12);
       --text: #e2e8f0;
       --muted: #94a3b8;
       --radius: 1rem;
@@ -37,24 +42,24 @@
       z-index: 10;
     }
 
-.nav {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;     /* stack items vertically */
-  align-items: center;        /* center horizontally */
-  text-align: center;         /* center text */
-  gap: 1rem;
-}
-
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.35rem;
+    }
 
     .brand {
       font-weight: 700;
       letter-spacing: 0.04em;
+      font-size: 1.4rem;
     }
 
     .tagline {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--muted);
     }
 
@@ -68,8 +73,9 @@
       align-items: center;
     }
 
-    .hero-left h1 {
-      font-size: clamp(2.3rem, 5vw, 3.2rem);
+    .hero-left h1,
+    .hero-left h2 {
+      font-size: clamp(2.1rem, 4.5vw, 3rem);
       margin-bottom: 0.5rem;
     }
 
@@ -77,6 +83,13 @@
       color: var(--muted);
       max-width: 34rem;
       margin-bottom: 1.5rem;
+    }
+
+    .hero-left h3 {
+      font-weight: 500;
+      color: var(--text);
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
     }
 
     .btn-primary {
@@ -112,6 +125,7 @@
     .hero-card p {
       color: var(--muted);
       font-size: 0.9rem;
+      margin-bottom: 0.7rem;
     }
 
     .section {
@@ -151,22 +165,125 @@
       font-size: 0.8rem;
     }
 
+    /* ===== SERVICES SECTION ===== */
+
+    .services-section {
+      max-width: 1100px;
+      margin: 2.5rem auto 2rem;
+      padding: 0 1.5rem;
+    }
+
+    .services-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 1.75rem;
+    }
+
+    .services-header h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .services-header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.6));
+      border-radius: 1rem;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      padding: 1.25rem 1.25rem 1.1rem;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 55%);
+      opacity: 0.75;
+      pointer-events: none;
+    }
+
+    .service-card h3 {
+      position: relative;
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-size: 1.02rem;
+    }
+
+    .service-card p {
+      position: relative;
+      margin: 0 0 0.6rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .service-card ul {
+      position: relative;
+      list-style: none;
+      padding-left: 0;
+      margin: 0.3rem 0 0;
+      font-size: 0.88rem;
+      color: #cbd5f5;
+    }
+
+    .service-card li {
+      margin-bottom: 0.25rem;
+    }
+
+    .service-card li::before {
+      content: "•";
+      margin-right: 0.4rem;
+      color: var(--accent);
+    }
+
+    .service-tagline {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 0.2rem;
+      position: relative;
+    }
+
     /* Responsive */
     @media (max-width: 960px) {
-      .hero, .section {
+      .hero,
+      .section {
         grid-template-columns: 1fr;
       }
+
       .hero {
         text-align: left;
       }
+
       .hero-card {
         max-width: 480px;
       }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
-    @media (max-width: 540px) {
-      .hero-left h1 {
-        font-size: 2.2rem;
+    @media (max-width: 640px) {
+      .hero-left h1,
+      .hero-left h2 {
+        font-size: 2.1rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -174,78 +291,181 @@
 <body>
   <header>
     <div class="nav">
-      <div>
-        <div class="brand"><h1>Study Hygiene</h1></div>
-        <div class="tagline"><h2>Master Your Study Habits</h2></div>
-      </div>
+      <div class="brand">Study Hygiene</div>
+      <div class="tagline">Master Your Study Habits</div>
     </div>
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-left">
-        <h2>Premium Private Tutoring:<br/>   Expertly Tailored to Fit Your Needs</h2>
-           <h3> For AP & College Courses, Standardized Test Prep, College Admissions</h3>
+        <h2>Premium Private Tutoring<br/>Expertly Tailored to Fit Your Needs</h2>
+        <h3>AP, College, High School & Middle School Courses, Standardized Test Prep, College Admissions & Professional Skills</h3>
         <p>
-          Anxious about math? Nervous about your SAT? Need an admissions essay that helps you stand out? We'd love to help! 
+          Anxious about math? Nervous about your SAT or GRE? Need an admissions essay that helps you stand out? We'd love to help.
         </p>
-        <a href="#contact" class="btn-primary">Get a quote</a>
+        <a href="#services" class="btn-primary">View Services</a>
       </div>
       <div class="hero-card">
         <h2>What We Do</h2>
         <p>
           • Tutoring: ChatGPT can't explain it like we can<br/>
-		  • Coaching: your goals called; they're tired of waiting<br/>
-		  • Consulting: make sense of the nonsense
+          • Coaching: your goals called; they're tired of waiting<br/>
+          • Consulting: make sense of the nonsense
         </p>
 
-		  <h2>Our Qualifications</h2>
+        <h2>Our Qualifications</h2>
         <p>
           • J.D. Law, Licensed Attorney<br/>
-		  • M.Sc. Electrical and Computer Engineering<br/>
-		  • B.Sc. Computer Engineering<br/>
-		  • Adjunct Faculty, Department of Mathematics<br/>
-		  • 25 Years Experience
-        </p>
-        <p style="margin-top: 1rem; font-size: 1.0rem; color: #64748b;">
+          • M.Sc. Electrical & Computer Engineering<br/>
+          • B.Sc. Computer Engineering<br/>
+          • Adjunct Faculty, Department of Mathematics<br/>
+          • 25 Years Experience
         </p>
       </div>
     </section>
 
+    <!-- ABOUT + CONTACT -->
     <section class="section" id="about">
       <div class="panel">
         <h2>About Us</h2>
         <p style="text-indent: 40px;">
-	We’re educators at heart, with degrees in Electrical Engineering (M.Sc.), Computer Engineering (B.Sc.), and Law (J.D., licensed attorney). We love what we do because it gives us the incredible opportunity to make a lasting difference in our students’ lives. At Study Hygiene, our teaching philosophy is holistic — blending content mastery, test-taking strategies, and learning psychology. We understand that consistent success comes from cultivating healthy and "hygenic" study habits. Having studied and taught in the American, British, and Asian systems of education, we have a deep understanding of effective learning strategies. Our students range from middle schoolers to seasoned professionals because learning is a lifelong pursuit.
-</p>
-	<p style="text-indent: 40px;">		  
-	For test prep, using diagnostics, we identify and fill gaps in essential content knowledge before diving into timed practice drills and high-impact test-taking strategies. We train students to strategically leverage their use of Desmos and other tools. We’ve helped many students score 1500+ on the SAT, 32+ on the ACT, and excel on many other standardized tests.
-</p>
-<p style="text-indent: 40px;">
-	We guide students through every stage of their college essay — from brainstorming to final polish. As gifted orators, we also coach public speaking and interviewing. In short, we can help you overcome anxiety, find your voice, and communicate with confidence — in any medium.
-</p><p style="text-indent: 40px;">
-	We know what it’s like to face challenges. We once struggled with math ourselves, and we know how transformative the right guidance can be. In over 25 years of tutoring, we’ve helped thousands of students. They’ve been admitted to top universities and built thriving careers as engineers, doctors, lawyers, scientists, and executives. Message us and let’s get started on your success story!
-</p>
+          We’re educators at heart, with degrees in Electrical Engineering (M.Sc.), Computer Engineering (B.Sc.), and Law (J.D., licensed attorney). We love what we do because it gives us the incredible opportunity to make a lasting difference in our students’ lives. At Study Hygiene, our teaching philosophy is holistic — blending content mastery, test-taking strategies, and learning psychology. We understand that consistent success comes from cultivating healthy and "hygienic" study habits. Having studied and taught in the American, British, and Asian systems of education, we have a deep understanding of effective learning strategies. Our students range from middle schoolers to seasoned professionals because learning is a lifelong pursuit.
+        </p>
+        <p style="text-indent: 40px;">
+          For test prep, using diagnostics, we identify and fill gaps in essential content knowledge before diving into timed practice drills and high-impact test-taking strategies. We train students to strategically leverage their use of Desmos and other tools. We’ve helped many students score 1500+ on the SAT, 32+ on the ACT, and excel on many other standardized tests.
+        </p>
+        <p style="text-indent: 40px;">
+          We guide students through every stage of their college essay — from brainstorming to final polish. As gifted orators, we also coach public speaking and interviewing. In short, we can help you overcome anxiety, find your voice, and communicate with confidence — in any medium.
+        </p>
+        <p style="text-indent: 40px;">
+          We know what it’s like to face challenges. We once struggled with math ourselves, and we know how transformative the right guidance can be. In over 25 years of tutoring, we’ve helped thousands of students. They’ve been admitted to top universities and built thriving careers as engineers, doctors, lawyers, scientists, and executives. Message us and let’s get started on your success story!
+        </p>
       </div>
-		
+
       <div class="panel" id="contact">
-        <h2>Contact</h2>
+        <h2>Contact & Pricing</h2>
         <p class="contact-item">Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a></p>
         <p class="contact-item">Text: (480) 442-4224</p>
-        <p class="contact-item">Location: Online (Google Meets)</p>
-		<p class="contact-item">Availability: 7 days a week</p>
-    	<br/><br/>
-
-		<h2>Services We Offer</h2>
-	 	 • College Readiness: Digital SAT, ACT, GRE, Personal Statements, College Essays <br/><br/>
-	 	 • Private School Admissions: ISEE, SSAT <br/><br/>
-		 • Military Prep: ASVAB, AFOQT <br/><br/>
-	 	 • Math: Algebra, Geometry, Trigonometry, Pre Calc, AP Calc AB/BC, Calc I/II, Business Calc <br/><br/>
-		 • Law: Legal Writing, Contract Drafting, Contracts, Torts, Civil Procedure <br/><br/>
-		 • Other Subjects: English, Essay Writing, Psychology <br/><br/>
-	 	 • Professional Skills: Public Speaking, Interview Prep, Career Planning, Resume Writing <br/><br/>
+        <p class="contact-item">Location: Online (Google Meet)</p>
+        <p class="contact-item">Availability: 7 days a week</p>
+        <p class="contact-item">Pricing: $90/hour</p>
+        <p class="contact-item" style="margin-top: 1rem; font-size: 0.9rem; color: var(--muted);">
+          Curious what we cover? Explore our <a href="#services">Services We Offer</a>.
+        </p>
       </div>
-		
+    </section>
+
+    <!-- SERVICES (NEW, STAND-OUT, SEO-FRIENDLY) -->
+    <section class="services-section" id="services">
+      <div class="services-header">
+        <h2>Services We Offer</h2>
+        <p>
+          Expert online tutoring, test prep, and academic coaching for middle school, high school, college, and professionals —
+          designed to build strong study habits, confidence, and lasting results.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Card 1 -->
+        <article class="service-card">
+          <div class="service-tagline">Test Prep & Admissions</div>
+          <h3>College Readiness & Test Prep Tutoring</h3>
+          <p>
+            Comprehensive college readiness support including strategy, content review, and applications guidance.
+          </p>
+          <ul>
+            <li>Digital SAT & ACT prep</li>
+            <li>GRE quantitative & verbal support</li>
+            <li>Personal statements & college essays</li>
+          </ul>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="service-card">
+          <div class="service-tagline">Private School</div>
+          <h3>Private School Admissions Coaching</h3>
+          <p>
+            Targeted preparation for competitive private and boarding school admissions.
+          </p>
+          <ul>
+            <li>ISEE & SSAT test prep</li>
+            <li>Application and essay support</li>
+            <li>Interview and school selection guidance</li>
+          </ul>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="service-card">
+          <div class="service-tagline">Military</div>
+          <h3>Military Entrance Exam Prep (ASVAB & AFOQT)</h3>
+          <p>
+            Focused instruction to maximize your scores and open more career options in the military.
+          </p>
+          <ul>
+            <li>ASVAB math & reasoning</li>
+            <li>AFOQT quantitative and verbal prep</li>
+            <li>Study plans tailored to enlistment goals</li>
+          </ul>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="service-card">
+          <div class="service-tagline">Math</div>
+          <h3>Math Tutoring – Middle School through College</h3>
+          <p>
+            Clear, patient explanations that build problem-solving confidence across core and advanced math.
+          </p>
+          <ul>
+            <li>Algebra, Geometry, Trigonometry</li>
+            <li>Pre-Calculus & AP Calculus AB/BC</li>
+            <li>Calculus I/II & Business Calculus</li>
+          </ul>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="service-card">
+          <div class="service-tagline">Law & Writing</div>
+          <h3>Law School & Legal Writing Tutoring</h3>
+          <p>
+            Guidance from a licensed attorney to sharpen your legal reasoning and professional writing.
+          </p>
+          <ul>
+            <li>Legal writing & contract drafting</li>
+            <li>Contracts, Torts, Civil Procedure</li>
+            <li>Law school exams & bar-adjacent skills</li>
+          </ul>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="service-card">
+          <div class="service-tagline">Humanities</div>
+          <h3>Writing, English & Psychology Support</h3>
+          <p>
+            Coaching to help you write clearly, think critically, and excel in humanities courses.
+          </p>
+          <ul>
+            <li>English & essay writing</li>
+            <li>Psychology coursework support</li>
+            <li>Research papers & presentations</li>
+          </ul>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="service-card">
+          <div class="service-tagline">Career & Life</div>
+          <h3>Professional Skills & Coaching</h3>
+          <p>
+            Practical coaching to help you speak, present, and plan your career with confidence.
+          </p>
+          <ul>
+            <li>Public speaking & interview prep</li>
+            <li>Career planning & goal setting</li>
+            <li>Resume writing & professional branding</li>
+          </ul>
+        </article>
+      </div>
     </section>
   </main>
 
