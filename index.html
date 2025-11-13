@@ -214,6 +214,16 @@
       margin-bottom: 0.7rem;
     }
 
+    /* HERO IMAGE INSIDE CARD */
+    .hero-image {
+      width: 100%;
+      border-radius: 0.9rem;
+      margin-bottom: 1rem;
+      display: block;
+      object-fit: cover;
+      max-height: 260px;
+    }
+
     .section {
       max-width: 1100px;
       margin: 1.5rem auto;
@@ -435,61 +445,26 @@
       color: var(--accent);
     }
 
-    .price {
-      position: relative;
-      margin-top: 0.4rem;
-      font-size: 0.92rem;
-      font-weight: 600;
-    }
-
-    .service-cta {
-      position: relative;
-      display: inline-block;
-      margin-top: 0.65rem;
-      padding: 0.4rem 0.9rem;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-decoration: none;
-      color: #0f172a;
-      background: var(--accent);
-      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.45);
-      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, background 0.15s ease-out;
-    }
-
-    .service-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.7);
-      background: #e0f2fe;
-    }
-
     /* category color-coding */
-    .service-card.testprep .service-tagline,
-    .service-card.testprep .price {
+    .service-card.testprep .service-tagline {
       color: var(--accent-testprep);
     }
-    .service-card.private .service-tagline,
-    .service-card.private .price {
+    .service-card.private .service-tagline {
       color: var(--accent-private);
     }
-    .service-card.military .service-tagline,
-    .service-card.military .price {
+    .service-card.military .service-tagline {
       color: var(--accent-military);
     }
-    .service-card.math .service-tagline,
-    .service-card.math .price {
+    .service-card.math .service-tagline {
       color: var(--accent-math);
     }
-    .service-card.law .service-tagline,
-    .service-card.law .price {
+    .service-card.law .service-tagline {
       color: var(--accent-law);
     }
-    .service-card.humanities .service-tagline,
-    .service-card.humanities .price {
+    .service-card.humanities .service-tagline {
       color: var(--accent-humanities);
     }
-    .service-card.career .service-tagline,
-    .service-card.career .price {
+    .service-card.career .service-tagline {
       color: var(--accent-career);
     }
 
@@ -688,6 +663,12 @@
         </div>
       </div>
       <div class="hero-card" aria-label="Tutor qualifications and services summary">
+        <!-- HERO STOCK IMAGE (update src to your chosen image path or URL) -->
+        <img
+          src="/images/study-hygiene-tutoring.jpg"
+          alt="Student working with an online tutor on a laptop"
+          class="hero-image"
+        />
         <h2>What We Do</h2>
         <p>
           • Online tutoring for middle school, high school, college & graduate students<br/>
@@ -749,7 +730,6 @@
 
         <!-- SIMPLE CONTACT FORM -->
         <form class="contact-form" method="POST" action="https://formspree.io/f/mdkykvjk">
-          <!-- TODO: Replace the action URL with your real form endpoint when you're ready -->
           <div class="contact-form-row">
             <label for="name">Your Name *</label>
             <input type="text" id="name" name="name" required />
@@ -822,8 +802,6 @@
             <li>GRE quantitative & verbal support</li>
             <li>Personal statements & college essays</li>
           </ul>
-          <div class="price">Rate: From $100/hr</div>
-          <a href="mailto:studyhygiene1@gmail.com?subject=College%20Readiness%20Tutoring" class="service-cta">Book College Readiness</a>
         </article>
 
         <!-- Card 2: Private School Admissions -->
@@ -841,8 +819,6 @@
             <li>Application and essay support</li>
             <li>Interview and school selection guidance</li>
           </ul>
-          <div class="price">Rate: From $95/hr</div>
-          <a href="mailto:studyhygiene1@gmail.com?subject=Private%20School%20Admissions" class="service-cta">Book Admissions Coaching</a>
         </article>
 
         <!-- Card 3: Military Exams -->
@@ -860,8 +836,6 @@
             <li>AFOQT quantitative and verbal prep</li>
             <li>Study plans tailored to enlistment goals</li>
           </ul>
-          <div class="price">Rate: From $90/hr</div>
-          <a href="mailto:studyhygiene1@gmail.com?subject=ASVAB%20%2F%20AFOQT%20Prep" class="service-cta">Book Military Prep</a>
         </article>
 
         <!-- Card 4: Math Tutoring -->
@@ -879,8 +853,6 @@
             <li>Pre-Calculus & AP Calculus AB/BC</li>
             <li>Calculus I/II & Business Calculus</li>
           </ul>
-          <div class="price">Rate: From $90/hr</div>
-          <a href="mailto:studyhygiene1@gmail.com?subject=Math%20Tutoring" class="service-cta">Book Math Tutoring</a>
         </article>
 
         <!-- Card 5: Law & Legal Writing -->
@@ -898,8 +870,6 @@
             <li>Contracts, Torts, Civil Procedure</li>
             <li>Law school exams & bar-adjacent skills</li>
           </ul>
-          <div class="price">Rate: From $120/hr</div>
-          <a href="mailto:studyhygiene1@gmail.com?subject=Law%20%2F%20Legal%20Writing%20Tutoring" class="service-cta">Book Law Support</a>
         </article>
 
         <!-- Card 6: English & Psych -->
@@ -917,8 +887,6 @@
             <li>Psychology coursework support</li>
             <li>Research papers & presentations</li>
           </ul>
-          <div class="price">Rate: From $90/hr</div>
-          <a href="mailto:studyhygiene1@gmail.com?subject=Writing%20%2F%20English%20Tutoring" class="service-cta">Book Writing Support</a>
         </article>
 
         <!-- Card 7: Professional Skills -->
@@ -936,8 +904,6 @@
             <li>Career planning & goal setting</li>
             <li>Resume writing & professional branding</li>
           </ul>
-          <div class="price">Rate: From $100/hr</div>
-          <a href="mailto:studyhygiene1@gmail.com?subject=Professional%20Skills%20Coaching" class="service-cta">Book Coaching</a>
         </article>
       </div>
     </section>
