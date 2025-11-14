@@ -37,7 +37,7 @@
       --muted: #94a3b8;
       --radius: 1rem;
 
-      /* category accent colors */
+      /* category accent colors (still here in case you want them later) */
       --accent-testprep: #38bdf8;
       --accent-private: #f97316;
       --accent-military: #22c55e;
@@ -195,41 +195,26 @@
     }
 
     .hero-card {
-      background: linear-gradient(
-        145deg,
-        rgba(15, 23, 42, 0.95),
-        rgba(15, 23, 42, 0.8)
-      );
-      border: 1px solid rgba(148, 163, 184, 0.2);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.2), rgba(2, 6, 23, 0.35));
+      border: 1px solid rgba(148, 163, 184, 0.1);
       border-radius: 1.25rem;
-      padding: 1.5rem 1.6rem 1.35rem;
-      box-shadow: 0 22px 40px rgba(0, 0, 0, 0.35);
-      backdrop-filter: blur(14px);
+      padding: 1.35rem 1.35rem 1.1rem;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(12px);
     }
 
     .hero-card h2 {
       margin-top: 0;
-      margin-bottom: 0.35rem;
-      font-size: 1.05rem;
-      font-weight: 300;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #f9fafb;
+      font-size: 1.2rem;
     }
 
     .hero-card p {
-      color: #e5e7eb;
-      font-size: 0.92rem;
-      font-weight: 300;
-      margin-top: 0;
-      margin-bottom: 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 0.7rem;
     }
 
-    .hero-card p:last-of-type {
-      margin-bottom: 0;
-    }
-
-    /* HERO IMAGE INSIDE CARD (optional, still available if you want to use it) */
+    /* HERO IMAGE (optional, commented out in HTML) */
     .hero-image {
       width: 100%;
       border-radius: 0.9rem;
@@ -404,15 +389,6 @@
       opacity: 1;
     }
 
-    .service-tagline {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.3rem;
-      position: relative;
-      font-weight: 600;
-    }
-
     .service-heading-row {
       display: flex;
       align-items: center;
@@ -428,7 +404,7 @@
 
     .service-card h3 {
       margin: 0;
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: #f1f5f9;
       letter-spacing: 0.01em;
@@ -436,7 +412,7 @@
 
     .service-card p {
       position: relative;
-      margin: 0.15rem 0 0.6rem;
+      margin: 0.3rem 0 0.6rem;
       color: var(--muted);
       font-size: 0.9rem;
     }
@@ -459,37 +435,6 @@
       margin-right: 0.4rem;
       color: var(--accent);
     }
-
-    /* category color-coding */
-    .service-card.testprep .service-tagline {
-      color: var(--accent-testprep);
-    }
-    .service-card.private .service-tagline {
-      color: var(--accent-private);
-    }
-    .service-card.military .service-tagline {
-      color: var(--accent-military);
-    }
-    .service-card.math .service-tagline {
-      color: var(--accent-math);
-    }
-    .service-card.law .service-tagline {
-      color: var(--accent-law);
-    }
-    .service-card.humanities .service-tagline {
-      color: var(--accent-humanities);
-    }
-    .service-card.career .service-tagline {
-      color: var(--accent-career);
-    }
-
-    .service-card.testprep li::before { color: var(--accent-testprep); }
-    .service-card.private li::before { color: var(--accent-private); }
-    .service-card.military li::before { color: var(--accent-military); }
-    .service-card.math li::before { color: var(--accent-math); }
-    .service-card.law li::before { color: var(--accent-law); }
-    .service-card.humanities li::before { color: var(--accent-humanities); }
-    .service-card.career li::before { color: var(--accent-career); }
 
     /* FAQ section */
     .faq-section {
@@ -639,8 +584,8 @@
             "description": "Online coaching for public speaking, interviews, career planning, and resume writing.",
             "areaServed": "United States"
           }
-        ]
-      }
+        }
+      ]
     }
   }
   </script>
@@ -669,8 +614,7 @@
         <h1>Premium Online Tutoring & Test Prep</h1>
         <h3>SAT, ACT, GRE, ASVAB, ISEE, SSAT, Math, Writing, Law</h3>
         <p>
-          Anxious about math? Nervous about your SAT? Need an admissions essay that helps you stand out?
-          Study Hygiene offers one-on-one online support tailored to your stage, schedule, and goals.
+          Anxious about math? Nervous about your SAT? Need an admissions essay that helps you stand out? Study Hygiene offers one-on-one online services tailored to you, regardless of the stage of your growth journey.
         </p>
         <div class="hero-actions">
           <a href="mailto:studyhygiene1@gmail.com?subject=Free%20Consultation%20Request" class="btn-primary">Book a Free 15-Minute Consultation</a>
@@ -678,23 +622,26 @@
         </div>
       </div>
       <div class="hero-card" aria-label="Tutor qualifications and services summary">
-        <!-- Optional stock image: uncomment and point src to your file if you add one
+        <!-- Optional hero image:
         <img
           src="/images/study-hygiene-tutoring.jpg"
           alt="Student working with an online tutor on a laptop"
           class="hero-image"
-        />
-        -->
+        /> -->
         <h2>What We Do</h2>
         <p>
-          One-on-one online tutoring, test prep, and academic coaching for middle school, high school, college,
-          graduate students, and professionals across the United States.
+          • Standardized Test Prep: Digital SAT, ACT, GRE, ASVAB, ISEE, SSAT & more<br/>
+          • Online Tutoring: Middle School, High School, College, Law School<br/>
+          • Writing: College Admissions Essays, Personal Statements, Cover Letters<br/>
         </p>
 
-        <h2>Who We Are</h2>
+        <h2>Our Credentials</h2>
         <p>
-          A licensed attorney and engineer with a J.D., M.Sc. in Electrical & Computer Engineering, and B.Sc. in Computer Engineering.
-          Adjunct mathematics faculty with over 25 years of experience helping students succeed.
+          • J.D. Law, Licensed Attorney<br/>
+          • M.Sc. Electrical & Computer Engineering<br/>
+          • B.Sc. Computer Engineering<br/>
+          • Adjunct Faculty, Department of Mathematics<br/>
+          • 25 Years Experience
         </p>
       </div>
     </section>
@@ -797,30 +744,28 @@
       </div>
 
       <div class="services-grid">
-        <!-- Card 1: College Readiness -->
+        <!-- Card 1: College Readiness / Test Prep -->
         <article class="service-card testprep">
-          <div class="service-tagline">Test Prep</div>
           <div class="service-heading-row">
             <span class="service-icon" aria-hidden="true">🎓</span>
-            <h3>Test Prep Tutoring For All Sections Of</h3>
+            <h3>Test Prep Tutoring (SAT, ACT, GRE)</h3>
           </div>
           <p>
-            Comprehensive online college readiness support including strategy, content review, and applications guidance.
+            Strategy-driven test prep for high-stakes exams, combining content review with timing, pacing, and confidence-building.
           </p>
           <ul>
-            <li>Digital SAT</li>
-            <li>Digital SAT & ACT prep</li>
+            <li>Digital SAT (all sections)</li>
+            <li>ACT (math, science, reading, English)</li>
             <li>GRE quantitative & verbal support</li>
-            <li>Personal statements & college essays</li>
+            <li>College essays & personal statements</li>
           </ul>
         </article>
 
         <!-- Card 2: Private School Admissions -->
         <article class="service-card private">
-          <div class="service-tagline">Private School Admissions Tests</div>
           <div class="service-heading-row">
             <span class="service-icon" aria-hidden="true">🏫</span>
-            <h3>Private School Admissions Coaching</h3>
+            <h3>Private School Admissions (ISEE & SSAT)</h3>
           </div>
           <p>
             Targeted online preparation for competitive private and boarding school admissions in the U.S.
@@ -834,10 +779,9 @@
 
         <!-- Card 3: Military Exams -->
         <article class="service-card military">
-          <div class="service-tagline">Military Entrance Exams</div>
           <div class="service-heading-row">
             <span class="service-icon" aria-hidden="true">🪖</span>
-            <h3>ASVAB & AFOQT Prep</h3>
+            <h3>ASVAB & AFOQT Test Prep</h3>
           </div>
           <p>
             Focused online instruction to maximize your ASVAB and AFOQT scores and open more career options in the military.
@@ -851,10 +795,9 @@
 
         <!-- Card 4: Math Tutoring -->
         <article class="service-card math">
-          <div class="service-tagline">Math Tutoring</div>
           <div class="service-heading-row">
             <span class="service-icon" aria-hidden="true">➗</span>
-            <h3>Middle School through College Math</h3>
+            <h3>Math Tutoring (Middle School through College)</h3>
           </div>
           <p>
             Clear, patient online math tutoring that builds problem-solving confidence and long-term understanding.
@@ -868,7 +811,6 @@
 
         <!-- Card 5: Law & Legal Writing -->
         <article class="service-card law">
-          <div class="service-tagline">Law & Legal Writing</div>
           <div class="service-heading-row">
             <span class="service-icon" aria-hidden="true">⚖️</span>
             <h3>Law School & Legal Writing Support</h3>
@@ -885,7 +827,6 @@
 
         <!-- Card 6: English & Psych -->
         <article class="service-card humanities">
-          <div class="service-tagline">Writing & Humanities</div>
           <div class="service-heading-row">
             <span class="service-icon" aria-hidden="true">✍️</span>
             <h3>Writing, English & Psychology Support</h3>
@@ -902,7 +843,6 @@
 
         <!-- Card 7: Professional Skills -->
         <article class="service-card career">
-          <div class="service-tagline">Professional Skills Coaching</div>
           <div class="service-heading-row">
             <span class="service-icon" aria-hidden="true">💼</span>
             <h3>Career & Communication Coaching</h3>
