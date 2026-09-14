@@ -25,7 +25,7 @@
 
 <title>Hanees Tutors | Private Online ASVAB Tutoring</title>
 
-<meta name="description" content="Expert, customized one-on-one online ASVAB tutoring with flexible weekly preparation, individual lessons, accelerated options for strict timelines, and a diagnostic and strategy session.">
+<meta name="description" content="Expert, customized one-on-one online ASVAB tutoring with an hourly option, a weekly preparation package, and a 7-day crash course for urgent test dates.">
 
 <meta name="robots" content="index, follow">
 <meta name="author" content="Hanees H.">
@@ -61,6 +61,21 @@
 </script>
 
 <link rel="stylesheet" href="styles.css">
+
+<!-- Local override: force the simplified 3-card package row onto one line on wide screens.
+     Safe to fold into styles.css later — kept inline here so nothing else on the site is touched. -->
+<style>
+  #packages .package-grid-three{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  @media (max-width:900px){
+    #packages .package-grid-three{
+      grid-template-columns:1fr;
+    }
+  }
+</style>
 
 </head>
 
@@ -132,7 +147,7 @@ Learn live from an ASVAB expert — not a self-help book or recorded lectures. O
 </div>
 
 <p class="hero-lead" style="font-size:1rem;">
-Choose flexible hourly or weekly lesson plans for thorough preparation, or opt for an accelerated one or two-week intensive program for an urgent testing deadline.
+Choose an hourly lesson, a weekly preparation package for thorough prep, or a 7-day crash course if your test date can't move.
 </p>
 
 <div class="hero-actions">
@@ -319,34 +334,17 @@ Book Trial Lesson & Diagnostic — $40
 <div class="section-heading">
 
 <h2>
-Choices That Fit Your Timeline
+Choose Your Path
 </h2>
 
 <p>
-Regular programs designed for students who have a timeline that allows for thorough preparation. <br> Accelerated programs designed for students with strict, non-negotiable testing deadlines.<br>Most students choose one of the packages below, following their Free 15-Minute Consult or their Trial Lesson and Diagnostic.
+Whether you have months to prepare or your test date is locked in, there's a straightforward option for you. <br>Most students choose one of these following their Free 15-Minute Consult or their Trial Lesson and Diagnostic.
 </p>
 
 </div>
 
 
-<div class="section-heading" style="margin-bottom:28px;">
-
-<div class="eyebrow">
-Standard ASVAB Prep Options
-</div>
-
-<h2 style="font-size:clamp(1.7rem,3vw,2.2rem);">
-For Regular Students
-</h2>
-
-<p>
-These programs are designed for thorough preparation. Students who study 4 – 8 weeks acheive their best score on their ASVAB.
-</p>
-
-</div>
-
-
-<div class="package-grid package-grid-two">
+<div class="package-grid package-grid-three">
 
 <!-- INDIVIDUAL -->
 
@@ -417,7 +415,7 @@ Save $80 per week
 
 
 <p class="package-description">
-Our most popular option and the choice we recommend for most students. Non-refundable. Expires 7 days from purchase.
+Our most popular option and the choice we recommend for most students. Best for the 4–8 weeks of preparation most students need. Non-refundable. Expires 7 days from purchase.
 </p>
 
 <ul>
@@ -438,29 +436,8 @@ Start Weekly Preparation — $380
 
 </div>
 
-</div>
 
-
-<div class="section-heading" style="margin:78px auto 28px;">
-
-<div class="eyebrow">
-Accelerated ASVAB Prep Options
-</div>
-
-<h2 style="font-size:clamp(1.7rem,3vw,2.2rem);">
-For Students on a Time Crunch
-</h2>
-
-<p>
-These accelerated, intensive programs are designed specifically for students whose ASVAB test date cannot be extended.
-</p>
-
-</div>
-
-
-<div class="package-grid package-grid-two">
-
-<!-- 7 DAY -->
+<!-- 7 DAY CRASH COURSE -->
 
 <div class="package">
 
@@ -486,7 +463,7 @@ Save $60
 </div>
 
 <p class="package-description">
-Focused preparation for students with an immediate testing deadline. Non-refundable. Expires 7 days from purchase.
+Focused preparation for students whose test date can't move. Non-refundable. Expires 7 days from purchase.
 </p>
 
 <ul>
@@ -502,52 +479,6 @@ Focused preparation for students with an immediate testing deadline. Non-refunda
 href="#intake"
 data-package="ASVAB 7-Day Crash Course — $745 — Save $60">
 Start 7-Day ASVAB Crash Course — $745
-</a>
-
-</div>
-
-
-<!-- 2 WEEK -->
-
-<div class="package">
-
-<div class="package-label">
-Intensive Prep Option </div>
-
-<h3>
-2-Week ASVAB Intensive
-</h3>
-
-<div class="price">$1,195</div>
-
-<div class="hourly-comparison">
-$1,380 value at the per lesson rate
-</div>
-
-<div class="savings">
-Save $185
-</div>
-
-<div class="price-note">
-</div>
-
-<p class="package-description">
-A concentrated program for students with a strict testing deadline. Non-refundable. Expires 14 days from purchase.
-</p>
-
-<ul>
-<li>12 private 1-hour lessons</li>
-<li>2-week concentrated schedule</li>
-<li>Prioritized scheduling</li>
-<li>Focus on all high-priority topics</li>
-<li>Targeted practice</li>
-<li>Test-taking strategies</li>
-</ul>
-
-<a class="button package-button"
-href="#intake"
-data-package="ASVAB 2-Week Intensive — $1,195 — Save $185">
-Start 2-Week ASVAB Intensive — $1,195
 </a>
 
 </div>
@@ -727,7 +658,7 @@ Everything you need to know before getting started.
 
 <details class="faq-item">
 <summary>What if my ASVAB test date is strict and cannot be moved?</summary>
-<p>Accelerated options are available, including a 7-Day ASVAB Crash Course for $745 and a 2-Week ASVAB Intensive for $1,195.</p>
+<p>The 7-Day ASVAB Crash Course is built for this — 7 private lessons on a concentrated schedule for $745.</p>
 </details>
 
 <details class="faq-item">
