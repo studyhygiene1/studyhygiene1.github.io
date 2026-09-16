@@ -62,21 +62,6 @@
 
 <link rel="stylesheet" href="styles.css">
 
-<!-- Local override: force the simplified 3-card package row onto one line on wide screens.
-     Safe to fold into styles.css later — kept inline here so nothing else on the site is touched. -->
-<style>
-  #packages .package-grid-three{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:24px;
-  }
-  @media (max-width:900px){
-    #packages .package-grid-three{
-      grid-template-columns:1fr;
-    }
-  }
-</style>
-
 </head>
 
 <body id="top">
@@ -105,6 +90,7 @@ Private One-on-One Tutoring and Test Preparation
 <a href="asvab.html" class="active">ASVAB Prep</a>
 <a href="sat.html">SAT Prep</a>
 <a href="math.html">Math Tutoring</a>
+<a href="act.html">ACT Prep</a>
 <a href="faq.html">FAQ</a>
 
 <a href="#intake" class="open-intake">
@@ -147,7 +133,7 @@ Learn live from an ASVAB expert — not a self-help book or recorded lectures. O
 </div>
 
 <p class="hero-lead" style="font-size:1rem;">
-Choose an hourly lesson, a weekly preparation package for thorough prep, or a 7-day crash course if your test date can't move.
+Choose an hourly lesson for flexible, as-needed help, or a weekly preparation package for thorough, structured prep.
 </p>
 
 <div class="hero-actions">
@@ -344,7 +330,7 @@ Whether you have months to prepare or your test date is locked in, there's a str
 </div>
 
 
-<div class="package-grid package-grid-three">
+<div class="package-grid package-grid-two">
 
 <!-- INDIVIDUAL -->
 
@@ -357,7 +343,7 @@ On Your Terms Prep Option
 <h3>
 Lesson on Demand</h3>
 
-<div class="price">$95</div>
+<div class="price">$80</div>
 
 <div class="price-note">
 Per lesson
@@ -376,7 +362,7 @@ Best option for students who want maximum flexibility.
 <a class="button secondary booking-trigger"
 href="#"
 data-booking-modal="bookingModalASVAB">
-Book a Lesson — $95
+Book a Lesson — $80
 </a>
 
 </div>
@@ -398,18 +384,18 @@ Comprehensive Prep Option
 Weekly Preparation
 </h3>
 
-<div class="price">$340</div>
+<div class="price">$290</div>
 
 <div class="price-note">
 Per week
 </div>
 
 <div class="hourly-comparison">
-$380 value at the per lesson rate
+$320 value at the per lesson rate
 </div>
 
 <div class="savings">
-Save $40 per week
+Save $30 per week
 </div>
 
 
@@ -429,59 +415,14 @@ Our most popular option and the choice we recommend for most students. Best for 
 </ul>
 
 <a class="button gold package-button"
-href="#intake"
-data-package="ASVAB Weekly Preparation — $340 per week — Save $40">
-Start Weekly Preparation — $340
+href="https://tidycal.com/YOUR-USERNAME/asvab-weekly-preparation"
+target="_blank" rel="noopener"
+data-package="ASVAB Weekly Preparation — $290 per week — Save $30">
+Start Weekly Preparation — $290
 </a>
 
 </div>
 
-
-<!-- 7 DAY CRASH COURSE -->
-
-<div class="package">
-
-<div class="package-label">
-Crash Course Option
-</div>
-
-<h3>
-7-Day ASVAB Crash Course
-</h3>
-
-<div class="price">$615</div>
-
-<div class="hourly-comparison">
-$665 value at the per lesson rate
-</div>
-
-<div class="savings">
-Save $50
-</div>
-
-<div class="price-note">
-</div>
-
-<p class="package-description">
-Focused preparation for students whose test date can't move. Non-refundable. Expires 10 days from purchase.
-</p>
-
-<ul>
-<li>7 private 1-hour lessons</li>
-<li>7-day concentrated schedule</li>
-<li>Priority scheduling</li>
-<li>Focus on highest-priority topics</li>
-<li>Targeted practice</li>
-<li>Test-taking strategies</li>
-</ul>
-
-<a class="button secondary package-button"
-href="#intake"
-data-package="ASVAB 7-Day Crash Course — $615 — Save $50">
-Start 7-Day ASVAB Crash Course — $615
-</a>
-
-</div>
 
 </div>
 
@@ -657,13 +598,8 @@ Everything you need to know before getting started.
 </details>
 
 <details class="faq-item">
-<summary>What if my ASVAB test date is strict and cannot be moved?</summary>
-<p>The 7-Day ASVAB Crash Course is built for this — 7 private lessons on a concentrated schedule for $615.</p>
-</details>
-
-<details class="faq-item">
 <summary>How does weekly preparation work?</summary>
-<p>Weekly ASVAB Preparation includes 4 private 1-hour lessons per week for $340, saving compared with the individual lesson rate.</p>
+<p>Weekly ASVAB Preparation includes 4 private 1-hour lessons per week for $290, saving compared with the individual lesson rate.</p>
 </details>
 
 <details class="faq-item">
