@@ -594,6 +594,22 @@ font-size:.92rem;
 color:var(--muted);
 }
 
+.why-card ul{
+list-style:disc;
+padding-left:1.1em;
+margin-top:2px;
+}
+
+.why-card li{
+font-size:.92rem;
+color:var(--muted);
+margin-bottom:2px;
+}
+
+#courses .why-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
 
 /* TWO CARD GRIDS */
 
@@ -1326,6 +1342,10 @@ flex:1 1 auto;
 grid-template-columns:1fr;
 }
 
+#courses .why-grid{
+grid-template-columns:1fr 1fr;
+}
+
 .form-row{
 grid-template-columns:1fr;
 gap:0;
@@ -1432,6 +1452,10 @@ padding:60px 0;
 .results-card{
 grid-template-columns:1fr;
 gap:15px;
+}
+
+#courses .why-grid{
+grid-template-columns:1fr;
 }
 
 .contact{
