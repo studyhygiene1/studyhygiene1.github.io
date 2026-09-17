@@ -636,6 +636,34 @@ border:2px solid var(--gold);
 box-shadow:0 14px 30px rgba(217,154,36,.17);
 }
 
+.start-here-card ul{
+list-style:none;
+margin:0 0 24px;
+flex:1;
+}
+
+.start-here-card li{
+position:relative;
+padding-left:25px;
+margin-bottom:10px;
+font-size:.94rem;
+color:var(--text);
+}
+
+.start-here-card li::before{
+content:"✓";
+position:absolute;
+left:0;
+top:0;
+font-weight:900;
+color:var(--green);
+}
+
+.start-here-card .button{
+text-align:center;
+width:100%;
+}
+
 
 /* RESULTS */
 
