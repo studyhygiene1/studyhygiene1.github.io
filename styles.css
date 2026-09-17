@@ -664,6 +664,33 @@ text-align:center;
 width:100%;
 }
 
+.policy-note{
+text-align:center;
+font-size:.78rem;
+color:var(--muted);
+margin-top:10px;
+line-height:1.4;
+}
+
+.policy-note a{
+color:var(--navy);
+text-decoration:underline;
+}
+
+.modal-policy-note{
+text-align:center;
+font-size:.85rem;
+color:var(--muted);
+margin-bottom:18px;
+line-height:1.4;
+}
+
+.modal-policy-note a{
+color:var(--navy);
+font-weight:700;
+text-decoration:underline;
+}
+
 
 /* RESULTS */
 
