@@ -113,6 +113,19 @@ document.body.classList.add("modal-open");
 
 }
 
+// GA4 / Google Ads tracking: fires the moment someone opens a booking
+// modal, since TidyCal's Free plan has no post-booking redirect page
+// to track a completed booking against. This measures booking intent,
+// not a confirmed paid booking.
+if(typeof gtag === "function"){
+
+gtag("event","booking_modal_opened",{
+booking_type: targetId,
+page_path: window.location.pathname
+});
+
+}
+
 });
 
 });
